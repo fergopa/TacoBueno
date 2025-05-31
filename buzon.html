@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buzón de Sugerencias</title>
+    <link rel="icon" type="image/png" href="logoo.png" >
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .contenedor {
+            background: rgb(46, 44, 44);
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: yellow;
+            font-family: "Georgia", serif;
+    font-style: italic; /* Para la cursiva */
+}
+        p{
+            color: #ddd;
+            font-family: "Georgia", serif;
+    font-style: italic; /* Para la cursiva */
+}
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: none;
+            font-family: "Georgia", serif;
+    font-style: italic; /* Para la cursiva */
+}
+
+        button {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: "Georgia", serif;
+    font-style: italic; /* Para la cursiva */
+        }
+        button:hover {
+            background-color: #eefa4e;
+        }
+        .mensaje {
+            display: none;
+            margin-top: 15px;
+            color: green;
+            font-weight: bold;
+        }
+        .navbar {
+            background-color: #000000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar img {
+            height: 50px;
+        }
+
+        .menu a {
+            color: white;
+            background: #03213d;
+            padding: 10px 15px;
+            margin-left: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #41297d;
+        }
+    </style>
+</head>
+<header class="navbar">
+        <img src="logo.JPG" alt="Logo Taco Bueno">
+        <div class="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#historia">Historia</a>
+            <a href="#sucursales">Sucursales</a>
+            <a href="file:///C:/Users/Mafer/Documents/fer/tacos/contactos.html">Contacto</a>
+            <a href="buzon.html">Sugerencias</a>
+        </div>
+    </header>
+
+
+<body>
+    <div class="contenedor">
+        <h2>💬 Buzón de Sugerencias</h2>
+        <p>Déjanos tu sugerencia para mejorar nuestro servicio</p>
+        <textarea id="sugerencia" placeholder="Escribe tu sugerencia aquí..."></textarea>
+        <button onclick="enviarSugerencia()">Enviar</button>
+        <p class="mensaje" id="mensaje">✅ ¡Gracias por tu sugerencia!</p>
+    </div>
+
+    <script>
+        function enviarSugerencia() {
+            let sugerencia = document.getElementById("sugerencia").value.trim();
+            
+            if (sugerencia === "") {
+                alert("Por favor, escribe una sugerencia antes de enviar.");
+                return;
+            }
+
+            // Simulamos el envío de datos (puedes conectarlo a un backend)
+            document.getElementById("mensaje").style.display = "block";
+
+            // Limpiamos el campo de sugerencias
+            document.getElementById("sugerencia").value = "";
+
+            // Ocultamos el mensaje después de unos segundos
+            setTimeout(() => {
+                document.getElementById("mensaje").style.display = "none";
+            }, 3000);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto - Taco Bueno</title>
+  <link rel="icon" type="image/png" href="logoo.png" >
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      max-width: 1200px;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-img {
+      max-width: 500px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .contact-img img {
+      width: 100%;
+      display: block;
+      border-radius: 20px;
+    }
+
+    .form-section {
+      max-width: 500px;
+      flex: 1;
+    }
+
+    .form-section h2 {
+      font-size: 2rem;
+      font-style: italic;
+    }
+
+    .form-section p {
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    input, textarea {
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1px solid white;
+      background-color: black;
+      color: white;
+      font-size: 1rem;
+      resize: none;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #f1c40f;
+    }
+
+    button {
+      background-color: black;
+      color: #f1c40f;
+      border: 2px solid #f1c40f;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #f1c40f;
+      color: black;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<header class="navbar">
+        <img src="logo.JPG" alt="Logo Taco Bueno">
+        <div class="menu">
+            <a href="file:///C:/Users/Mafer/Documents/fer/tacos/indexm.html">Historia</a>
+            <a href="file:///C:/Users/Mafer/Documents/fer/tacos/indexm.html">Sucursales</a>
+            <a href="file:///C:/Users/Mafer/Documents/fer/tacos/indexm.html">Parrilladas</a>
+            <a href="file:///C:/Users/Mafer/Documents/fer/tacos/contactos.html">Contacto</a>
+            <a href="buzon.html">Sugerencias</a>
+        </div>
+    </header>
+<body>
+  <div class="container">
+    <div class="contact-img">
+      <img src="taco.jpg" alt="Taco Bueno Contacto">
+    </div>
+    
+    <div class="form-section">
+      <h2><strong>Contáctanos</strong></h2>
+      <p>¿Tienes algo que decirnos? Escríbenos.</p>
+      <form>
+        <input type="text" name="nombre" placeholder="Nombre" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="mensaje" rows="5" placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
